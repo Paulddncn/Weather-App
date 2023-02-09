@@ -1,0 +1,32 @@
+h3 {
+    color: #13547a;
+}
+
+
+.navbar {
+    background-color: #13547a;
+}
+
+#search-input {
+    width: 100%;
+}
+
+.search-btn {
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #13547a;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#search-col {
+    margin: 10px;
+}
+
+.current-city-box-css {
+    border: solid black 1px;
+    margin: 20px 20px 15px 10px;
+}
+
