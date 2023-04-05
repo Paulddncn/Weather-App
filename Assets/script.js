@@ -4,28 +4,15 @@ var key = '11a69b2b8d9505e35af4031a2fe1c8ca'
 
 var currentCity = document.querySelector("#current-city")
 var date = document.querySelector("#date")
-var weatherIcon = document.querySelector("#weather-icon")
 var temp = document.querySelector("#temp")
 var wind = document.querySelector("#wind")
 var humid = document.querySelector("#humidity")
 
 var forecastDate = document.querySelectorAll(".forecast-date")
-var forecastIcon = document.querySelectorAll(".icon")
 var forecastTemp = document.querySelectorAll(".forecast-temp")
 var forecastWind = document.querySelectorAll(".forecast-wind")
 var forecastHumidity = document.querySelectorAll(".forecast-humidity")
-//  {Date} dateObject
-// function formatDate(dateObject) {
-//   const parts = {
-//     date: dateObject.getDate(),
-//     month: dateObject.getMonth() + 1,
-//     year: dateObject.getFullYear()
-//   
 
-
-
-// var today = dayjs().format('MMM D, YYYY');
-// $('#date').text(today);
 
 searchBtn.addEventListener("click", function () {
 
@@ -67,7 +54,6 @@ var getCurrentWeather = function (lat, lon) {
 
       date.textContent = today.format('MMM D, YYYY');
       currentCity.textContent = "City: " + searchInput.value
-      weatherIcon.textContent = "http:openweathermap.org/img/wn/" + icon + ".png";
       temp.textContent = "Temp: " + temperature + "°"
       wind.textContent = "windspeed: " + windSpeed + "mph"
       humidity.textContent = "Humidity: " + humid + "%"
@@ -93,10 +79,6 @@ var getWeatherForecast = function (lat, lon) {
         var day = today.add(index/8 + 1, 'day')
         console.log(index)
 
-      
-        //currentCity.textContent = "City: " + searchInput.value
-
-        //forecastIcon[index/8].textContent = "http:openweathermap.org/img/wn/" + icons + ".png"
         forecastDate[index / 8].textContent = day.format('MMM D, YYYY');
         forecastTemp[index / 8].textContent = "Temp: " + temperature + "°"
         forecastWind[index / 8].innerHTML = "Windspeed: " + windSpeed + "mph";
