@@ -22,7 +22,7 @@ searchBtn.addEventListener("click", function () {
 
 var getGeoLocation = function () {
   var citySearch = searchInput.value
-  var geoCoding = `http://api.openweathermap.org/geo/1.0/direct?q=${citySearch}&appid=` + key
+  var geoCoding = `https://api.openweathermap.org/geo/1.0/direct?q=${citySearch}&appid=` + key
   fetch(geoCoding)
     .then(function (response) {
       return response.json();
@@ -35,7 +35,7 @@ var getGeoLocation = function () {
 };
 
 var getCurrentWeather = function (lat, lon) {
-  var currentWeather = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=' + key + "&units=imperial";
+  var currentWeather = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=' + key + "&units=imperial";
   fetch(currentWeather)
     .then(function (response) {
       return response.json();
@@ -62,7 +62,7 @@ var getCurrentWeather = function (lat, lon) {
 }
 
 var getWeatherForecast = function (lat, lon) {
-  var fiveDayForecast = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=' + key + "&units=imperial";
+  var fiveDayForecast = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=' + key + "&units=imperial";
   
   fetch(fiveDayForecast)
     .then(function (response) {
